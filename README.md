@@ -1,2 +1,3 @@
 # XamarinForms
-NavigatedFrom Not Working when click on button from MasterDetailPage
+Expected Behavior:
+OnNavigatedFrom method is called from BasePage and MasterDetailPage isn't shown on LoginPage

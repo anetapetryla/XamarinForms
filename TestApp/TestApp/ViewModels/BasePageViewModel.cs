@@ -2,6 +2,8 @@
 using Prism.Mvvm;
 using Prism.Navigation;
 using System.Diagnostics;
+using TestApp.Views;
+using Xamarin.Forms;
 
 namespace TestApp.ViewModels
 {
@@ -12,17 +14,17 @@ namespace TestApp.ViewModels
             _navigationService = navigationService;
         }
 
-        public void OnNavigatedFrom(NavigationParameters parameters)
+        public void OnNavigatedFrom(INavigationParameters parameters)
         {
             Debug.WriteLine("OnNavigatedFrom");
         }
 
-        public void OnNavigatedTo(NavigationParameters parameters)
+        public void OnNavigatedTo(INavigationParameters parameters)
         {
             Debug.WriteLine("OnNavigatedTo");
         }
 
-        public void OnNavigatingTo(NavigationParameters parameters)
+        public void OnNavigatingTo(INavigationParameters parameters)
         {
             Debug.WriteLine("OnNavigatingTo");
         }

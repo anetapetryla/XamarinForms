@@ -36,17 +36,16 @@ namespace TestApp
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MasterDetailPage1>();
-            containerRegistry.RegisterForNavigation<MasterPage, MasterPageViewModel>();
+            containerRegistry.RegisterForNavigation<MasterDetailPage1, MasterDetailPage1ViewModel>();
             containerRegistry.RegisterForNavigation<ViewA, ViewAViewModel>();
             containerRegistry.RegisterForNavigation<ViewB, ViewBViewModel>();
             containerRegistry.RegisterForNavigation<BasePage, BasePageViewModel>();
+            containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
         }
 
         protected async override void OnInitialized()
         {
-            InitializeComponent();
-            await NavigationService.NavigateAsync("MasterDetailPage1/NavigationPage/BasePage");
+            await NavigationService.NavigateAsync("LoginPage");
         }
     }
 }
